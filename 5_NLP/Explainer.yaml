@@ -1,0 +1,16 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: explainer
+  labels:
+    name: explainer
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        name: explainer
+    spec:
+      containers:
+      - name: tdw-explainer
+        image: gcr.io/your-project/nlp_explainer:latest
